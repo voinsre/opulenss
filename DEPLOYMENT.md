@@ -4,22 +4,6 @@ The easiest way to publish your Next.js application is using **Vercel** (the cre
 
 ## Prerequisites
 
-- A GitHub, GitLab, or Bitbucket account.
-- A Vercel account (free).
-
-## Step 1: Push to GitHub
-
-1. Create a new repository on [GitHub](https://github.com/new).
-2. Run the following commands in your terminal (replace `YOUR_USERNAME` and `YOUR_REPO`):
-
-    ```bash
-    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-    git branch -M main
-    git push -u origin main
-    ```
-
-## Step 2: Deploy to Vercel
-
 1. Go to [Vercel Dashboard](https://vercel.com/new).
 2. Click **"Add New..."** -> **"Project"**.
 3. Import your `opulenss` repository from GitHub.

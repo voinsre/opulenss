@@ -47,7 +47,7 @@ export default function AdminTalentPage() {
                     >
                         <div className="aspect-[4/5] relative overflow-hidden">
                             <Image
-                                src={talent.mainImage}
+                                src={talent.avatarUrl || talent.gallery[0]}
                                 alt={talent.name}
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { User, Bell, Shield, CreditCard, LogOut, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function AccountPage() {
     const { user, logout } = useUser();
