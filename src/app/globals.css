@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-deep: #044830;
+  --color-emerald-teal: #0B6B57;
+  --color-blush: #F5C7D3;
+  --color-shell: #F7D7E1;
+  --color-offblack: #0B0B0F;
+  --color-bone: #F3EEE7;
+  --color-warmgrey: #A69B8D;
+  --color-gold: #D0A969;
+  --color-rosegold: #C89472;
+  --color-plum: #4E1C3F;
+
+  --font-display: var(--font-serif), serif;
+  --font-body: var(--font-sans), sans-serif;
+}
+
+body {
+  background-color: var(--color-emerald-deep);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Noise Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Smooth Scroll (Lenis) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-emerald-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-emerald-teal);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Luxury Utilities */
+.text-glow {
+  text-shadow: 0 0 20px rgba(243, 238, 231, 0.3);
+}
+
+.border-glow {
+  box-shadow: 0 0 15px rgba(208, 169, 105, 0.1);
+}
+
+.glass-panel {
+  background: rgba(4, 72, 48, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(to right, #F3EEE7, #D0A969, #F3EEE7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
